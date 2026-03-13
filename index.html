@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DKU AI Token Test Guide</title>
+  <style>
+    :root {
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --text: #172033;
+      --muted: #5f6b85;
+      --accent: #0f62fe;
+      --accent-2: #dce8ff;
+      --border: #d9e1f2;
+      --success: #1f7a1f;
+      --warn-bg: #fff8e6;
+      --warn-border: #f2c94c;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #f7f9fc 0%, #eef3fb 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px 64px;
+    }
+
+    .hero {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 10px 30px rgba(20, 35, 90, 0.06);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 24px;
+      box-shadow: 0 8px 24px rgba(20, 35, 90, 0.05);
+    }
+
+    .step {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+      margin-right: 10px;
+      font-size: 0.95rem;
+      vertical-align: middle;
+    }
+
+    h2 {
+      margin: 0 0 14px;
+      font-size: 1.25rem;
+    }
+
+    .en {
+      display: block;
+      font-weight: 700;
+    }
+
+    .zh {
+      display: block;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    .hint {
+      background: var(--accent-2);
+      border-left: 4px solid var(--accent);
+      padding: 14px 16px;
+      border-radius: 10px;
+      color: #21304d;
+      margin-top: 12px;
+    }
+
+    .warning {
+      background: var(--warn-bg);
+      border: 1px solid var(--warn-border);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-top: 12px;
+    }
+
+    code, pre {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    }
+
+    .inline-code {
+      background: #f1f4fa;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2px 8px;
+      font-size: 0.96rem;
+    }
+
+    .code-wrap {
+      position: relative;
+      margin-top: 14px;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      border: none;
+      border-radius: 10px;
+      background: var(--accent);
+      color: white;
+      padding: 10px 14px;
+      font-size: 0.92rem;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(15, 98, 254, 0.22);
+    }
+
+    .copy-btn:hover {
+      opacity: 0.92;
+    }
+
+    pre {
+      background: #0f172a;
+      color: #e5eefc;
+      padding: 18px;
+      border-radius: 14px;
+      overflow-x: auto;
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-word;
+      border: 1px solid #1f2b45;
+      padding-top: 56px;
+    }
+
+    .ok {
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    ul {
+      margin: 10px 0 0 20px;
+      padding: 0;
+    }
+
+    li { margin: 10px 0; }
+
+    .footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <h1>Test Your DKU AI Token</h1>
+      <p class="subtitle">Quick verification for students and faculty before building or coding with DKU AI services.<br>在开始使用 DKU AI 服务进行开发或测试前，可先用此页面快速验证 token 是否可用。</p>
+    </section>
+
+    <div class="grid">
+      <section class="card">
+        <h2><span class="step">1</span><span class="en">Copy your token</span><span class="zh">复制你的 token</span></h2>
+        <p>Open your token manager and copy the token that starts with <span class="inline-code">sk-</span>.<br>打开 token manager，复制以 <span class="inline-code">sk-</span> 开头的 token。</p>
+        <div class="warning">
+          <strong>Important / 重要：</strong> keep your token private. Do not share it with others and do not post it in screenshots, chat messages, or public code repositories.<br>请妥善保管你的 token，不要分享给他人，也不要出现在截图、聊天记录或公开代码仓库中。
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><span class="step">2</span><span class="en">Open Terminal</span><span class="zh">打开 Terminal</span></h2>
+        <p>Open Terminal on macOS, Windows Terminal, or another command-line tool.<br>打开 macOS 的 Terminal、Windows Terminal，或其他命令行工具。</p>
+        <div class="hint">
+          You will paste a single <span class="inline-code">curl</span> command to test whether your token can access the DKU AI service.<br>你将粘贴一条 <span class="inline-code">curl</span> 命令，用于测试 token 是否可以访问 DKU AI 服务。
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><span class="step">3</span><span class="en">Run the test command</span><span class="zh">运行测试命令</span></h2>
+        <p>Replace <span class="inline-code">sk-xxxxxxxx</span> with your own token, then run the command below:<br>将 <span class="inline-code">sk-xxxxxxxx</span> 替换成你自己的 token，然后运行下面的命令：</p>
+        <div class="code-wrap">
+          <button class="copy-btn" onclick="copyCommand(this)">Copy Command / 复制命令</button>
+          <pre id="token-command">curl -sS https://aichat.dukekunshan.edu.cn:3443/v1/chat/completions \
+  -H "Authorization: Bearer sk-xxxxxxxx" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gpt-5-mini",
+    "messages": [
+      {"role": "user", "content": "What day is it today and what happened in history on this date?"}
+    ],
+    "max_tokens": 10000
+  }'</pre>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2><span class="step">4</span><span class="en">Check the result</span><span class="zh">检查返回结果</span></h2>
+        <p>If your token works, you should see a JSON response in Terminal. That means your token is valid and can access the model.<br>如果 token 可用，你会在 Terminal 中看到 JSON 返回结果。这表示你的 token 有效，并且可以访问模型。</p>
+        <ul>
+          <li><span class="ok">Success / 成功：</span> you receive a structured JSON response with model output.<br>你会收到包含模型输出的 JSON 结果。</li>
+          <li><strong>Unauthorized / invalid token：</strong> check whether you copied the full token correctly.<br><strong>未授权 / token 无效：</strong> 请检查是否完整、正确地复制了 token。</li>
+          <li><strong>No response / connection issue：</strong> check network access and try again.<br><strong>无返回 / 连接异常：</strong> 请检查网络连接后重试。</li>
+        </ul>
+      </section>
+    </div>
+
+    <p class="footer">DKU AI Support · Quick Token Verification Guide · DKU AI 支持 · Token 快速验证指南</p>
+  </div>
+
+  <script>
+    async function copyCommand(button) {
+      const text = document.getElementById('token-command').innerText;
+      try {
+        await navigator.clipboard.writeText(text);
+        const original = button.innerText;
+        button.innerText = 'Copied / 已复制';
+        setTimeout(() => {
+          button.innerText = original;
+        }, 1800);
+      } catch (err) {
+        button.innerText = 'Copy Failed / 复制失败';
+        setTimeout(() => {
+          button.innerText = 'Copy Command / 复制命令';
+        }, 1800);
+      }
+    }
+  </script>
+</body>
+</html>
